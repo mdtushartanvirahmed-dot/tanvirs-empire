@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Tanvir's Empire - Premium burgers, pizza, fried chicken, drinks and shakes."
+    >
+
+    <meta
+        name="theme-color"
+        content="#070707"
+    >
+
+    <title>Tanvir's Empire | Premium Restaurant</title>
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    >
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header id="main-header">
+
+        <!-- Logo -->
+
+        <div class="logo">
+
+            <a href="#home">
+
+                <h1>
+                    Tanvir's
+                    <span>Empire</span>
+                </h1>
+
+            </a>
+
+        </div>
+
+
+        <!-- Desktop Navigation -->
+
+        <nav>
+
+            <ul>
+
+                <li>
+                    <a href="#home">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#menu">
+                        Menu
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#booking">
+                        Table Booking
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#reviews">
+                        Reviews
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+
+        <!-- Header Right -->
+
+        <div class="header-actions">
+
+            <div
+                class="cart-icon"
+                onclick="toggleCart()"
+                title="Shopping Cart"
+            >
+
+                <i class="fas fa-shopping-bag"></i>
+
+                <span id="cart-count">
+                    0
+                </span>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         HERO SECTION
+    ====================================================== -->
+
+    <section
+        id="home"
+        class="hero"
+    >
+
+        <div class="hero-content">
+
+
+            <!-- Small Badge -->
+
+            <span class="badge-tag">
+
+                <i class="fas fa-fire"></i>
+
+                The Ultimate Fast Food Experience
+
+            </span>
+
+
+            <!-- Main Heading -->
+
+            <h2>
+
+                Welcome to
+
+                <br>
+
+                <span>
+                    Tanvir's Empire
+                </span>
+
+            </h2>
+
+
+            <!-- Description -->
+
+            <p>
+
+                Premium taste, fresh ingredients and
+                unforgettable food — all in one place.
+                Enjoy our signature burgers, pizzas,
+                crispy chicken and refreshing drinks.
+
+            </p>
+
+
+            <!-- Promo -->
+
+            <div class="promo-box">
+
+                <i class="fas fa-gift"></i>
+
+                <span>
+                    Get <strong>25% OFF</strong>
+                    with promo code
+                    <strong>EMPIRE25</strong>
+                </span>
+
+            </div>
+
+
+            <!-- Hero Buttons -->
+
+            <div class="hero-btns">
+
+                <a
+                    href="#menu"
+                    class="btn btn-primary"
+                >
+
+                    <i class="fas fa-utensils"></i>
+
+                    Order Online
+
+                </a>
+
+
+                <a
+                    href="#booking"
+                    class="btn btn-secondary"
+                >
+
+                    <i class="far fa-calendar-alt"></i>
+
+                    Reserve Table
+
+                </a>
+
+            </div>
+
+
+            <!-- Hero Stats -->
+
+            <div
+                class="hero-stats"
+                style="
+                    display:flex;
+                    gap:35px;
+                    margin-top:40px;
+                    flex-wrap:wrap;
+                "
+            >
+
+                <div>
+
+                    <strong
+                        style="
+                            display:block;
+                            color:#f5b942;
+                            font-size:24px;
+                        "
+                    >
+                        12+
+                    </strong>
+
+                    <span
+                        style="
+                            color:#999;
+                            font-size:12px;
+                        "
+                    >
+                        Delicious Items
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <strong
+                        style="
+                            display:block;
+                            color:#f5b942;
+                            font-size:24px;
+                        "
+                    >
+                        100%
+                    </strong>
+
+                    <span
+                        style="
+                            color:#999;
+                            font-size:12px;
+                        "
+                    >
+                        Fresh Ingredients
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <strong
+                        style="
+                            display:block;
+                            color:#f5b942;
+                            font-size:24px;
+                        "
+                    >
+                        5★
+                    </strong>
+
+                    <span
+                        style="
+                            color:#999;
+                            font-size:12px;
+                        "
+                    >
+                        Customer Experience
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         MENU SECTION
+    ====================================================== -->
+
+    <section
+        id="menu"
+        class="menu-section"
+    >
+
+        <h2 class="section-title">
+
+            Our Tasty
+            <span>Menu</span>
+
+        </h2>
+
+
+        <!-- Search -->
+
+        <div class="search-container">
+
+            <i
+                class="fas fa-search search-icon"
+            ></i>
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search your favorite food..."
+                autocomplete="off"
+            >
+
+        </div>
+
+
+        <!-- Categories -->
+
+        <div class="menu-categories">
+
+            <button
+                class="cat-btn active"
+                data-category="all"
+                onclick="filterMenu('all', event)"
+            >
+                🔥 All Items
+            </button>
+
+
+            <button
+                class="cat-btn"
+                data-category="burgers"
+                onclick="filterMenu('burgers', event)"
+            >
+                🍔 Burgers
+            </button>
+
+
+            <button
+                class="cat-btn"
+                data-category="pizza"
+                onclick="filterMenu('pizza', event)"
+            >
+                🍕 Pizza
+            </button>
+
+
+            <button
+                class="cat-btn"
+                data-category="chicken"
+                onclick="filterMenu('chicken', event)"
+            >
+                🍗 Fried Chicken
+            </button>
+
+
+            <button
+                class="cat-btn"
+                data-category="drinks"
+                onclick="filterMenu('drinks', event)"
+            >
+                🥤 Drinks & Shakes
+            </button>
+
+        </div>
+
+
+        <!-- Menu Items -->
+
+        <div
+            class="menu-grid"
+            id="menu-container"
+        >
+
+            <!-- JavaScript will load menu -->
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         CART
+    ====================================================== -->
+
+    <div
+        class="cart-modal"
+        id="cart-modal"
+    >
+
+        <!-- Cart Header -->
+
+        <div class="cart-header">
+
+            <h3>
+
+                <i class="fas fa-shopping-cart"></i>
+
+                Your Food Cart
+
+            </h3>
+
+
+            <span
+                class="close-cart"
+                onclick="toggleCart()"
+            >
+                &times;
+            </span>
+
+        </div>
+
+
+        <!-- Cart Items -->
+
+        <div
+            class="cart-body"
+            id="cart-items"
+        >
+
+            <div class="empty-cart">
+
+                <i class="fas fa-shopping-bag"></i>
+
+                <p class="empty-cart-text">
+                    আপনার কার্ট বর্তমানে খালি।
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Cart Summary -->
+
+        <div class="cart-summary">
+
+
+            <!-- Coupon -->
+
+            <div class="promo-input-group">
+
+                <input
+                    type="text"
+                    id="couponCode"
+                    placeholder="Coupon code"
+                >
+
+                <button
+                    onclick="applyCoupon()"
+                >
+                    Apply
+                </button>
+
+            </div>
+
+
+            <!-- Subtotal -->
+
+            <div class="summary-line">
+
+                <span>
+                    Subtotal
+                </span>
+
+                <span>
+                    ৳<span id="cart-subtotal">0</span>
+                </span>
+
+            </div>
+
+
+            <!-- Discount -->
+
+            <div
+                class="summary-line discount-line"
+            >
+
+                <span>
+                    Discount
+                </span>
+
+                <span>
+                    -৳<span id="cart-discount">0</span>
+                </span>
+
+            </div>
+
+
+            <!-- Total -->
+
+            <div
+                class="summary-line total-line"
+            >
+
+                <strong>
+                    Total Amount
+                </strong>
+
+                <strong>
+                    ৳<span id="cart-total">0</span>
+                </strong>
+
+            </div>
+
+
+            <!-- COD -->
+
+            <button
+                class="btn btn-primary btn-block"
+                onclick="checkout()"
+            >
+
+                <i class="fas fa-cash-register"></i>
+
+                Cash on Delivery
+
+            </button>
+
+
+            <!-- WhatsApp -->
+
+            <button
+                class="btn btn-whatsapp btn-block"
+                onclick="sendWhatsAppOrder()"
+            >
+
+                <i class="fab fa-whatsapp"></i>
+
+                Order via WhatsApp
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         TABLE BOOKING
+    ====================================================== -->
+
+    <section
+        id="booking"
+        class="booking-section"
+    >
+
+        <h2 class="section-title">
+
+            Reserve A
+            <span>Table</span>
+
+        </h2>
+
+
+        <form
+            class="booking-form"
+            onsubmit="handleBooking(event)"
+        >
+
+
+            <div class="input-group">
+
+                <input
+                    type="text"
+                    placeholder="Your Name"
+                    required
+                >
+
+                <input
+                    type="tel"
+                    placeholder="Mobile Number"
+                    required
+                >
+
+            </div>
+
+
+            <div class="input-group">
+
+                <input
+                    type="date"
+                    required
+                >
+
+                <input
+                    type="time"
+                    required
+                >
+
+            </div>
+
+
+            <div class="input-group">
+
+                <select required>
+
+                    <option value="">
+                        Number of Guests
+                    </option>
+
+                    <option value="1">
+                        1 Person
+                    </option>
+
+                    <option value="2">
+                        2 Persons
+                    </option>
+
+                    <option value="4">
+                        4 Persons
+                    </option>
+
+                    <option value="6">
+                        6+ Persons
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <textarea
+                placeholder="Special request or message (optional)"
+                rows="4"
+            ></textarea>
+
+
+            <button
+                type="submit"
+                class="btn btn-primary"
+            >
+
+                <i class="fas fa-check-circle"></i>
+
+                Confirm Table Booking
+
+            </button>
+
+        </form>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         REVIEWS
+    ====================================================== -->
+
+    <section
+        id="reviews"
+        class="reviews-section"
+    >
+
+        <h2 class="section-title">
+
+            Customer
+            <span>Reviews</span>
+
+        </h2>
+
+
+        <div
+            class="reviews-grid"
+            id="reviews-container"
+        >
+
+
+            <!-- Review 1 -->
+
+            <div class="review-card">
+
+                <div class="stars">
+                    ⭐⭐⭐⭐⭐
+                </div>
+
+                <p>
+                    "The burger was amazing and
+                    the overall food experience
+                    was excellent!"
+                </p>
+
+                <h4>
+                    - Shakib Ahmed
+                </h4>
+
+            </div>
+
+
+            <!-- Review 2 -->
+
+            <div class="review-card">
+
+                <div class="stars">
+                    ⭐⭐⭐⭐⭐
+                </div>
+
+                <p>
+                    "The BBQ pizza tasted great
+                    and the service was very fast."
+                </p>
+
+                <h4>
+                    - Sanjida Rahman
+                </h4>
+
+            </div>
+
+        </div>
+
+
+        <!-- Review Form -->
+
+        <form
+            class="review-form"
+            onsubmit="addReview(event)"
+        >
+
+            <h3>
+                Share Your Experience
+            </h3>
+
+
+            <input
+                type="text"
+                id="revName"
+                placeholder="Your Name"
+                required
+            >
+
+
+            <select
+                id="revRating"
+                required
+            >
+
+                <option value="5">
+                    ⭐⭐⭐⭐⭐ (5 Stars)
+                </option>
+
+                <option value="4">
+                    ⭐⭐⭐⭐ (4 Stars)
+                </option>
+
+                <option value="3">
+                    ⭐⭐⭐ (3 Stars)
+                </option>
+
+            </select>
+
+
+            <textarea
+                id="revComment"
+                placeholder="Write your experience..."
+                rows="4"
+                required
+            ></textarea>
+
+
+            <button
+                type="submit"
+                class="btn btn-primary"
+            >
+
+                Submit Review
+
+            </button>
+
+        </form>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer>
+
+        <p>
+
+            &copy; 2026
+            <strong style="color:#f5b942;">
+                Tanvir's Empire
+            </strong>.
+
+            All Rights Reserved.
+
+        </p>
+
+        <p
+            style="
+                margin-top:7px;
+                color:#555;
+            "
+        >
+            Premium Food • Fresh Taste • Great Experience
+        </p>
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         TOAST
+    ====================================================== -->
+
+    <div
+        id="toast"
+        class="toast"
+    >
+        Item added to cart!
+    </div>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
